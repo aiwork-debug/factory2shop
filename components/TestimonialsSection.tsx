@@ -68,7 +68,7 @@ const reviews = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="w-full bg-slate-50/50 py-16 font-sans border-t border-slate-200">
+    <section className="w-full bg-slate-50/50 py-12 font-sans border-t border-slate-200">
       {/* CONTINUOUS MARQUEE ANIMATION STYLES */}
       <style jsx global>{`
         @keyframes marqueeScroll {
@@ -90,16 +90,16 @@ export default function TestimonialsSection() {
       `}</style>
 
       {/* CENTERED CONTAINER WITH LEFT & RIGHT GAP */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* SECTION HEADER */}
-        <div className="text-center space-y-2">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
+        <div className="text-center space-y-1.5">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
             Customer Reviews
           </h2>
-          <p className="text-slate-700 text-sm font-semibold">
+          <p className="text-slate-700 text-xs font-semibold">
             Loved by Mobile Retailers & Shop Owners
           </p>
-          <p className="text-slate-500 text-xs">
+          <p className="text-slate-500 text-[11px]">
             Join hundreds of UK store owners who trust Factory2Shop for wholesale mobile purchasing
           </p>
         </div>
@@ -115,18 +115,18 @@ export default function TestimonialsSection() {
             {[...reviews, ...reviews].map((item, idx) => (
               <div
                 key={`${item.id}-${idx}`}
-                className="w-[300px] sm:w-[350px] shrink-0 bg-white rounded-2xl p-6 border border-slate-200 shadow-xs relative flex flex-col justify-between hover:shadow-md transition-all duration-300 min-h-[200px]"
+                className="w-[300px] sm:w-[350px] shrink-0 bg-white rounded-2xl p-5 border border-slate-200 shadow-xs relative flex flex-col justify-between hover:shadow-md transition-all duration-300 min-h-[190px]"
               >
                 {/* Background Quote Icon */}
-                <Quote className="absolute top-5 right-5 text-slate-100 fill-slate-100 w-10 h-10 -z-0 rotate-180" />
+                <Quote className="absolute top-4 right-4 text-slate-100 fill-slate-100 w-8 h-8 -z-0 rotate-180" />
 
-                <div className="space-y-4 relative z-10">
+                <div className="space-y-3 relative z-10">
                   {/* User Profile Image, Rating & Details */}
                   <div className="flex items-center gap-3">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-xs shrink-0"
+                      className="w-10 h-10 rounded-full object-cover border-2 border-slate-100 shadow-xs shrink-0"
                     />
                     <div>
                       {/* Rating Stars */}
@@ -134,7 +134,7 @@ export default function TestimonialsSection() {
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            size={13}
+                            size={12}
                             className={
                               i < item.rating
                                 ? "fill-amber-400 text-amber-400"
@@ -143,15 +143,15 @@ export default function TestimonialsSection() {
                           />
                         ))}
                       </div>
-                      <h3 className="text-sm font-bold text-slate-900 leading-tight">
+                      <h3 className="text-xs font-bold text-slate-900 leading-tight">
                         {item.name}
                       </h3>
-                      <p className="text-[11px] text-slate-400 font-medium">{item.role}</p>
+                      <p className="text-[10px] text-slate-400 font-medium">{item.role}</p>
                     </div>
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-slate-600 text-xs leading-relaxed font-normal">
+                  <p className="text-slate-600 text-[11px] leading-relaxed font-normal">
                     "{item.review}"
                   </p>
                 </div>
