@@ -152,8 +152,14 @@ const mockBatches = [
   },
 ];
 
-export default function CategoryBatchesSection() {
-  const [activeCategory, setActiveCategory] = useState("All Batches");
+interface CategoryBatchesSectionProps {
+  initialCategory?: string;
+}
+
+export default function CategoryBatchesSection({
+  initialCategory = "All Batches",
+}: CategoryBatchesSectionProps) {
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
 
   const filteredBatches =
     activeCategory === "All Batches"
@@ -161,7 +167,7 @@ export default function CategoryBatchesSection() {
       : mockBatches.filter((b) => b.category === activeCategory);
 
   return (
-    <section className="w-full bg-slate-50 py-10 px-4 md:px-8 font-sans">
+    <section id="batches" className="w-full bg-slate-50 py-10 px-4 md:px-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* SECTION HEADER */}

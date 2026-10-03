@@ -51,7 +51,7 @@ export default function ExploreSection() {
           </h2>
 
           <p className="text-slate-600 text-xs md:text-sm max-w-xl mx-auto leading-relaxed font-normal">
-            Discover active factory orders across tech & electronics categories[cite: 1, 2]. Join forces with other UK trade buyers to lock in wholesale factory pricing today[cite: 2].
+            Discover active factory orders across tech &amp; electronics categories. Join forces with other UK trade buyers to lock in wholesale factory pricing today.
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import {
   Factory,
   TrendingDown,
@@ -120,7 +121,7 @@ export default function WhyFactory2ShopSection() {
                 Why Source Through <span className="text-emerald-400">Factory2Shop</span>?
               </h2>
               <p className="text-slate-200 text-xs leading-relaxed font-medium drop-shadow-xs">
-                We empower independent UK retailers and Amazon/eBay sellers to source high-margin tech accessories directly at tier-1 factory prices[cite: 2].
+                We empower independent UK retailers and Amazon/eBay sellers to source high-margin tech accessories directly at tier-1 factory prices.
               </p>
             </div>
 
@@ -151,13 +152,13 @@ export default function WhyFactory2ShopSection() {
                 <p className="text-xs font-bold text-white">Join over 1,200+ UK Retailers</p>
               </div>
 
-              <a
-                href="#batches"
+              <Link
+                href="/#batches"
                 className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 group"
               >
                 <span>Explore Batches</span>
                 <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

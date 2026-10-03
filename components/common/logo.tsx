@@ -1,8 +1,13 @@
 import React from 'react';
 
-export default function Logo() {
+interface LogoProps {
+  dark?: boolean;
+  className?: string;
+}
+
+export default function Logo({ dark = false, className = "" }: LogoProps) {
   return (
-    <div className="flex items-center">
+    <div className={`flex items-center ${className}`}>
       <svg width="220" height="42" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Aggregation Hex Icon */}
         <g transform="translate(2, 5)">
@@ -14,7 +19,15 @@ export default function Logo() {
           <path d="M25 30 L35 24 L35 34 L25 40 Z" fill="#047857"/>
         </g>
         {/* Full Text Visibility */}
-        <text x="48" y="33" fontFamily="Inter, system-ui, sans-serif" fontWeight="900" fontSize="20" fill="#0F172A" letterSpacing="0.5">
+        <text
+          x="48"
+          y="33"
+          fontFamily="Inter, system-ui, sans-serif"
+          fontWeight="900"
+          fontSize="20"
+          fill={dark ? "#FFFFFF" : "#0F172A"}
+          letterSpacing="0.5"
+        >
           FACTORY<tspan fill="#10B981">2</tspan>SHOP
         </text>
       </svg>

@@ -78,9 +78,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#batches" className="hover:text-emerald-400 transition">
+                <Link href="/#batches" className="hover:text-emerald-400 transition">
                   Active Open Batches
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/faqs" className="hover:text-emerald-400 transition">

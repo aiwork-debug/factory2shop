@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, ShieldCheck, Factory, Truck, CheckCircle2 } from "lucide-react";
 
 export default function HeroSection() {
@@ -44,13 +45,13 @@ export default function HeroSection() {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href="#batches"
+                <Link
+                  href="/#batches"
                   className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-5 py-2.5 rounded-full transition shadow-md"
                 >
                   <span>Explore Open Batches</span>
                   <ArrowRight size={14} />
-                </a>
+                </Link>
                 <div className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-slate-950/80 border border-slate-700 text-slate-200 text-xs font-medium backdrop-blur-md">
                   <Truck size={14} className="text-emerald-400" />
                   <span>Consolidated UK Delivery</span>

@@ -152,7 +152,7 @@ export default function TestimonialsSection() {
 
                   {/* Review Text */}
                   <p className="text-slate-600 text-[11px] leading-relaxed font-normal">
-                    "{item.review}"
+                    &ldquo;{item.review}&rdquo;
                   </p>
                 </div>
               </div>
